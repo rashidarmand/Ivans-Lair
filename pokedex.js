@@ -7,15 +7,17 @@ class Trainer {
 
     all() {
         // Return back a list of all pokemon objects in the 'this.party' array
-        console.log(this.party);
+        return this.party;
+        // console.log(this.party);
     }
 
     get(name) {
         // Return just one pokemon object based on a name being passed as a string. Not case-sensitive.
-        let index = 0
+        let index = 0;
         for (index of this.party) {
             if (name.toLowerCase() === index.name){
-                console.log(index);
+                return index;
+                // console.log(index);
             }
         }
     }
@@ -23,10 +25,11 @@ class Trainer {
 }
 
 // Creates a new Trainer object named 'Ivan'
-let ivan = new Trainer()
+let ivan = new Trainer();
 
 // Creates the Pokemon class and defines the parameters that it accepts
 class Pokemon {
+
     constructor(name, hp, attack, defense, specialAttack, specialDefense, abilities) {
         this.name = name;
         this.hp = hp;
@@ -36,6 +39,7 @@ class Pokemon {
         this.specialDefense = specialDefense;
         this.abilities = abilities;
     }
+
 }
 
 
@@ -45,22 +49,22 @@ axios.get(`https://pokeapi.co/api/v2/pokemon/150`)
     // Loops through the selected pokemon's abilities in the JSON file and pushes it to an empty array.
     // The array is then returned so I can access the data inside of it at a later point.
     let getAbilities = (()=> {
-          let array = []
-          let i = 0
-          while(i < response.data.abilities.length) {
-              array.push(response.data.abilities[i].ability['name']);
-              i++;
-          } 
-          return array;
-      })
+        let array = [];
+        let i = 0;
+        while(i < response.data.abilities.length) {
+            array.push(response.data.abilities[i].ability['name']);
+            i++;
+        } 
+        return array;
+    })
 
-    let name = response.data['name']  // Name
-    let hp = response.data.stats[5]['base_stat']  // HP
-    let attack = response.data.stats[4]['base_stat']  // Attack
-    let defense = response.data.stats[3]['base_stat'] // Defense
-    let specialAttack = response.data.stats[2]['base_stat']   // Special-Attack
-    let specialDefense = response.data.stats[1]['base_stat']  // Special-Defense
-    let abilities = getAbilities()    // Calls the getAbilites function which returns an array with the names of the abilites
+    let name = response.data['name'];  // Name
+    let hp = response.data.stats[5]['base_stat'];  // HP
+    let attack = response.data.stats[4]['base_stat'];  // Attack
+    let defense = response.data.stats[3]['base_stat']; // Defense
+    let specialAttack = response.data.stats[2]['base_stat'];   // Special-Attack
+    let specialDefense = response.data.stats[1]['base_stat'];  // Special-Defense
+    let abilities = getAbilities();    // Calls the getAbilites function which returns an array with the names of the abilites
 
     // Create a new Pokemon object with the name 'Mewtwo' and pass it data from the AJAX call.
     let mewtwo = new Pokemon (
@@ -71,10 +75,10 @@ axios.get(`https://pokeapi.co/api/v2/pokemon/150`)
         specialAttack,
         specialDefense,
         abilities
-    )
-    
+    );
+
     // Adds the new Pokemon to the end of the array in my Trainer object so it can be accessed later on with either the .get() or the .all() method
-    ivan.party.push(mewtwo)
+    ivan.party.push(mewtwo);
 })
 .catch(function (error) {
   console.log(error);
@@ -87,22 +91,22 @@ axios.get(`https://pokeapi.co/api/v2/pokemon/151`)
     // Loops through the selected pokemon's abilities in the JSON file and pushes it to an empty array.
     // The array is then returned so I can access the data inside of it at a later point.
     let getAbilities = (()=> {
-          let array = []
-          let i = 0
-          while(i < response.data.abilities.length) {
-              array.push(response.data.abilities[i].ability['name']);
-              i++;
-          } 
-          return array;
-      })
+        let array = [];
+        let i = 0;
+        while(i < response.data.abilities.length) {
+            array.push(response.data.abilities[i].ability['name']);
+            i++;
+        } 
+        return array;
+    })
 
-    let name = response.data['name']  // Name
-    let hp = response.data.stats[5]['base_stat']  // HP
-    let attack = response.data.stats[4]['base_stat']  // Attack
-    let defense = response.data.stats[3]['base_stat'] // Defense
-    let specialAttack = response.data.stats[2]['base_stat']   // Special-Attack
-    let specialDefense = response.data.stats[1]['base_stat']  // Special-Defense
-    let abilities = getAbilities()    // Calls the getAbilites function which returns an array with the names of the abilites
+    let name = response.data['name'];  // Name
+    let hp = response.data.stats[5]['base_stat'];  // HP
+    let attack = response.data.stats[4]['base_stat'];  // Attack
+    let defense = response.data.stats[3]['base_stat']; // Defense
+    let specialAttack = response.data.stats[2]['base_stat'];   // Special-Attack
+    let specialDefense = response.data.stats[1]['base_stat'];  // Special-Defense
+    let abilities = getAbilities();    // Calls the getAbilites function which returns an array with the names of the abilites
 
     //Create a new Pokemon object with the name 'Mew' and pass it data from the AJAX call.
     let mew = new Pokemon (
@@ -113,10 +117,10 @@ axios.get(`https://pokeapi.co/api/v2/pokemon/151`)
         specialAttack,
         specialDefense,
         abilities
-    )
+    );
 
     // Adds the new Pokemon to the end of the array in my Trainer object so it can be accessed later on with either the .get() or the .all() method
-    ivan.party.push(mew)
+    ivan.party.push(mew);
 })
 .catch(function (error) {
   console.log(error);
@@ -129,22 +133,22 @@ axios.get(`https://pokeapi.co/api/v2/pokemon/384`)
     // Loops through the selected pokemon's abilities in the JSON file and pushes it to an empty array.
     // The array is then returned so I can access the data inside of it at a later point.
     let getAbilities = (()=> {
-          let array = []
-          let i = 0
-          while(i < response.data.abilities.length) {
-              array.push(response.data.abilities[i].ability['name']);
-              i++;
-          } 
-          return array;
-      })
+        let array = [];
+        let i = 0;
+        while(i < response.data.abilities.length) {
+            array.push(response.data.abilities[i].ability['name']);
+            i++;
+        } 
+        return array;
+    })
 
-    let name = response.data['name']  // Name
-    let hp = response.data.stats[5]['base_stat']  // HP
-    let attack = response.data.stats[4]['base_stat']  // Attack
-    let defense = response.data.stats[3]['base_stat'] // Defense
-    let specialAttack = response.data.stats[2]['base_stat']   // Special-Attack
-    let specialDefense = response.data.stats[1]['base_stat']  // Special-Defense
-    let abilities = getAbilities()    // Calls the getAbilites function which returns an array with the names of the abilites
+    let name = response.data['name'];  // Name
+    let hp = response.data.stats[5]['base_stat'];  // HP
+    let attack = response.data.stats[4]['base_stat'];  // Attack
+    let defense = response.data.stats[3]['base_stat']; // Defense
+    let specialAttack = response.data.stats[2]['base_stat'];   // Special-Attack
+    let specialDefense = response.data.stats[1]['base_stat'];  // Special-Defense
+    let abilities = getAbilities();    // Calls the getAbilites function which returns an array with the names of the abilites
 
     //Create a new Pokemon object with the name 'Rayquaza' and pass it data from the AJAX call.
     let rayquaza = new Pokemon (
@@ -155,10 +159,10 @@ axios.get(`https://pokeapi.co/api/v2/pokemon/384`)
         specialAttack,
         specialDefense,
         abilities
-    )
+    );
 
     // Adds the new Pokemon to the end of the array in my Trainer object so it can be accessed later on with either the .get() or the .all() method
-    ivan.party.push(rayquaza)
+    ivan.party.push(rayquaza);
 })
 .catch(function (error) {
   console.log(error);
