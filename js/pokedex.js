@@ -169,5 +169,5 @@ axios.get(`https://pokeapi.co/api/v2/pokemon/384`)
 });
 
 
-
-
+// Initialize all Materialize Plugins. Function is defined in Materialize JS
+ M.AutoInit();
