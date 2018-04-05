@@ -2,6 +2,14 @@
     margin-top: 500px;
 }
 
+@import url('https://fonts.googleapis.com/css?family=Bangers|Bungee');
+
+*{
+    font-family: 'Bungee', cursive;
+
+    
+}
+
 #myHeader{
     height: 150px;
     background-color: transparent;
@@ -9,40 +17,80 @@
 
 #ivanInfo{
     height: 1100px;
-    #ivansColumn{
-        height:100%;
-    }
+    // #ivansColumn{
+    //     height: ;
+    // }
     #trainerCard{
+        height: 375px;
         z-index: 1;
         position: relative;
-        bottom: 375px;
-        left: 125px;
+        bottom: 415px;
+        left: 110px;
     }
 }
 
+#ivansColumn{
+    height: 100%;
+    width: 100%;
+}
+
+#ivansContainer{
+    height: 100%;
+}
+
+#ivan{
+    height: 1100px;
+}
+
+// .loadingGif{
+//     min-height: unset;
+//     height:25px;
+//     width: 25px;
+// }
 
 .parallax-container{
     height: 700px;
 }
 
+.outermostRow{
+    margin: 0;
+}
+
+#mewtwoY{
+    transform: scaleX(-1);
+}
+
+#rayquaza, #megaRayquaza{
+    transform: scaleX(-1);
+}
 .outermostContainer{
     // display:flex;
     // justify-content: space-evenly;
     height: 1250px;
+    background-color: teal;
     // .row{
     //     height:100%;
     // }
     // .col{
     //     height: 100%;
     // }
-    img{
-        height:100%;
-        width:100%;
-    }
+    // img{
+    //     height:100%;
+    //     width:100%;
+    // }
 }
 .nameAndImageContainer{
     display: block;
-    height:100%;
+    // height:100%;
+    max-height: fit-content;
+
+    .loadingGif{
+        display: inline-block;
+        text-align: center;
+        margin: 16.5px;
+        height:125px;
+        width: 125px;
+    }
 }
 
 
@@ -52,6 +100,8 @@
     }
     .pokeImage{
         margin: 50px 0;
+        height: 100%;
+        width: 100%;
     }
 
 
@@ -95,7 +145,8 @@ blockquote.leftSide {
 .stats{
     position: relative;
     text-align: center;
-    bottom: 125px;
+    line-height: 30px;
+    bottom: 137px;
     z-index: 1;
 
 }
@@ -103,9 +154,14 @@ blockquote.leftSide {
 .containerForMoves{
     height: 360px;
     overflow: auto;  
-    ul.collapsible{
-        margin: 5px 0;
-        border-radius: 25px;
-    }  
 }
   
+.hidden{
+    display:none;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
