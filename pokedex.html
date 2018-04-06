@@ -42,7 +42,7 @@
 
   <!-- Container Row that goes horizontally across the entire page -->
   <!-- Start of the First Row (Mewtwo's Row) -->
-  <section class="row outermostRow">
+  <section id="mewtwoOutermostRow" class="row">
     <!-- One Column in the Container Row that goes all the way across the page (12 on the grid) It has a fixed height established in SASS -->
     <section class="col s12 outermostContainer">
       <!-- A New Container Row that is Inside the Outer Container Row that goes across the span of the page -->
@@ -53,13 +53,15 @@
           <!-- The Image height and width is set to 100% of it's container in SASS and the name of the pokemon is displayed underneath it -->
           <section>
             <div id="mewTwoName" class="flow-text">
+              <h1 class="pokeName mewtwoX hidden">Mewtwo-X</h1>
+              <h1 class="pokeName mewtwoY hidden">Mewtwo-Y</h1>
               <img class="loadingGif" src="images/masterball_by_britishtime-d68qina.gif" alt="" srcset="">
               <img class="loadingGif" src="images/masterball_by_britishtime-d68qina.gif" alt="" srcset="">
               <img class="loadingGif" src="images/masterball_by_britishtime-d68qina.gif" alt="" srcset="">
             </div>
-            <img id="mewtwo" class="responsive-img pokeImage" src="images/150-mewtwo.png">
-            <img id="mewtwoX" class="responsive-img pokeImage hidden" src="images/150-f2-mewtwo-x.png">
-            <img id="mewtwoY" class="responsive-img pokeImage hidden" src="images/150-f3-mewtwo-Y.png">
+            <img id="mewtwo" class="responsive-img materialboxed pokeImage" src="images/150-mewtwo.png">
+            <img id="mewtwoX" class="responsive-img materialboxed pokeImage hidden" src="images/150-f2-mewtwo-x.png">
+            <img id="mewtwoY" class="responsive-img materialboxed pokeImage hidden" src="images/150-f3-mewtwo-Y.png">
             <section class="row">
               <section class="col s12">
                 <ul class="tabs">
@@ -87,15 +89,17 @@
             <!-- Masterballs with stats -->
             <section class="row">
               <section class="col s4 masterballContainer">
-                <div class="hoverable masterballs">
+                <div class="masterballs">
                   <img class="responsive-img" src="images/masterball_by_britishtime-d68qina (1).png" alt="" srcset="">
                   <div id="mewTwoHP" class="stats flow-text">
+                     <span class="mewtwoX hidden">HP<br><span class="statValue">106</span></span>
+                     <span class="mewtwoY hidden">HP<br><span class="statValue">106</span></span>
                     <!-- HP Goes Here -->
                   </div>
                 </div>
               </section>
               <section class="col s4 masterballContainer">
-                <div class="hoverable masterballs">
+                <div class="masterballs">
                   <img class="responsive-img" src="images/masterball_by_britishtime-d68qina (1).png" alt="" srcset="">
                   <div id="mewTwoAttack" class="stats flow-text">
                     <!-- Attack Goes Here -->
@@ -103,7 +107,7 @@
                 </div>
               </section>
               <section class="col s4 masterballContainer">
-                <div class="hoverable masterballs">
+                <div class="masterballs">
                   <img class="responsive-img" src="images/masterball_by_britishtime-d68qina (1).png" alt="" srcset="">
                   <div id="mewTwoDefense" class="stats flow-text">
                     <!-- Defense Goes Here -->
@@ -119,7 +123,7 @@
             <!-- Masterballs with stats -->
             <section class="row">
               <section class="col s4 masterballContainer">
-                <div class="hoverable masterballs">
+                <div class="masterballs">
                   <img class="responsive-img" src="images/masterball_by_britishtime-d68qina (1).png" alt="" srcset="">
                   <div id="mewTwoAbilities" class="stats flow-text">
                     <!-- Abilities Go Here -->
@@ -127,7 +131,7 @@
                 </div>
               </section>
               <section class="col s4 masterballContainer">
-                <div class="hoverable masterballs">
+                <div class="masterballs">
                   <img class="responsive-img" src="images/masterball_by_britishtime-d68qina (1).png" alt="" srcset="">
                   <div id="mewTwoSpAtk" class="stats flow-text">
                     <!-- Special Attack Goes Here -->
@@ -135,7 +139,7 @@
                 </div>
               </section>
               <section class="col s4 masterballContainer">
-                <div class="hoverable masterballs">
+                <div class="masterballs">
                   <img class="responsive-img" src="images/masterball_by_britishtime-d68qina (1).png" alt="" srcset="">
                   <div id="mewTwoSpDef" class="stats flow-text">
                     <!-- Special Defense Goes Here -->
@@ -150,29 +154,99 @@
           <blockquote class="flow-text leftSide">
             <!-- Masterballs with stats -->
             <section class="row">
-                <section class="col s4 masterballContainer">
-                  <div class="hoverable masterballs">
-                    <img class="responsive-img" src="images/masterball_by_britishtime-d68qina (1).png" alt="" srcset="">
-                    <div id="mewTwoAbilities" class="stats flow-text">
-                      <!-- Abilities Go Here -->
+                <section class="col s4 containerForMoves mewtwoMoves scale-transition scale-out">
+                      <ul class="collapsible">
+                          <li>
+                              <div class="collapsible-header">
+                                  <span class="psychicName pokemonMoveName"><!--MoveName goes here--></span>
+                                  <span class="badge psychicBadge"><!--TYPE goes here--></span>
+                                </div>
+                                <div class="collapsible-body center-align">
+                                  <section class="row">
+                                    <section class="psychicAccuracy col s4">
+                                      <!-- ACC goes here -->
+                                    </section>
+                                    <section class="psychicPP col s4">
+                                      <!-- PP Goes Here -->
+                                    </section>
+                                    <section class="psychicPower col s4">
+                                      <!-- PWR Goes here -->
+                                    </section>
+                                  </section>
+                                </div>
+                          </li>
+                          <li>
+                            <div class="collapsible-header">
+                              <span class="hyperBeamName pokemonMoveName"><!--MoveName Goes Here--></span>
+                              <span class="badge hyperBeamBadge"><!--TYPE Goes Here--></span>
+                            </div>
+                            <div class="collapsible-body center-align">
+                              <section class="row">
+                                <section class="hyperBeamAccuracy col s4">
+                                  <!-- ACC goes here -->
+                                </section>
+                                <section class="hyperBeamPP col s4">
+                                  <!-- PP goes here -->
+                                </section>
+                                <section class="hyperBeamPower col s4">
+                                  <!-- PWR goes here -->
+                                </section>
+                              </section>
                     </div>
+                          </li>
+                        </ul>
                   </div>
                 </section>
                 <section class="col s4 masterballContainer">
-                  <div class="hoverable masterballs">
+                  <div class="masterballs">
                     <img class="responsive-img" src="images/masterball_by_britishtime-d68qina (1).png" alt="" srcset="">
-                    <div id="mewTwoSpAtk" class="stats flow-text">
-                      <!-- Special Attack Goes Here -->
+                    <div id="mewtwosButton" class="stats flow-text">
+                      Moves<br><button class="btn-floating btn-large pulse"><i class="material-icons">compare_arrows</i></button>
                     </div>
-                  </div>
+                    </div>
                 </section>
-                <section class="col s4 masterballContainer">
-                  <div class="hoverable masterballs">
-                    <img class="responsive-img" src="images/masterball_by_britishtime-d68qina (1).png" alt="" srcset="">
-                    <div id="mewTwoSpDef" class="stats flow-text">
-                      <!-- Special Defense Goes Here -->
-                    </div>
+                <section class="col s4 containerForMoves mewtwoMoves scale-transition scale-out">
+                    <div class="col s12 centerMovesBox">
+                        <ul class="collapsible">
+                            <li>
+                                <div class="collapsible-header">
+                                    <span class="psychoCutName pokemonMoveName"><!--MoveName goes here--></span>
+                                    <span class="badge psychoCutBadge"><!--TYPE goes here--></span>
                   </div>
+                                  <div class="collapsible-body center-align">
+                                    <section class="row">
+                                      <section class="psychoCutAccuracy col s4">
+                                        <!-- ACC goes here -->
+                                      </section>
+                                      <section class="psychoCutPP col s4">
+                                        <!-- PP goes here -->
+                                      </section>
+                                      <section class="psychoCutPower col s4">
+                                        <!-- PWR goes here -->
+                                      </section>
+                </section>
+                    </div>
+                            </li>
+                            <li>
+                              <div class="collapsible-header">
+                                <span class="shadowBallName pokemonMoveName"><!--MoveName goes here--></span>
+                                <span class="badge shadowBallBadge"><!--TYPE goes here--></span>
+                  </div>
+                              <div class="collapsible-body center-align">
+                                <section class="row">
+                                  <section class="shadowBallAccuracy col s4">
+                                    <!--ACC goes here-->
+                </section>
+                                  <section class="shadowBallPP col s4">
+                                    <!--PP goes here -->
+              </section>
+                                  <section class="shadowBallPower col s4">
+                                    <!--PWR goes here-->
+                                  </section>
+                                </section>
+                              </div>
+                            </li>
+                          </ul>
                 </section>
               </section>
           </blockquote>
@@ -190,14 +264,14 @@
         <!-- Second Parallax -->
         <section class="parallax-container">
           <div class="parallax">
-            <img src="http://weni.ru/wallpapers/45e2eea510c9d7e16cd6c48594284f68/2731_6.jpg">
+            <img src="https://www.hd-wallpapersdownload.com/script/new-wallpaper/desktop-hd-images-of-saturn-the-planet-download.jpg">
           </div>
         </section>
 
 
         <!-- Container Row that goes horizontally across the entire page -->
         <!-- Start of the First Row (Mew's Row) -->
-        <section class="row outermostRow">
+        <section id="mewOutermostRow" class="row outermostRow">
           <!-- One Column in the Container Row that goes all the way across the page (12 on the grid) It has a fixed height established in SASS -->
           <section class="col s12 outermostContainer">
             <!-- A New Container Row that is Inside the Outer Container Row that goes across the span of the page -->
@@ -212,7 +286,9 @@
                     <img class="loadingGif" src="images/masterball_by_britishtime-d68qina.gif" alt="" srcset="">
                     <img class="loadingGif" src="images/masterball_by_britishtime-d68qina.gif" alt="" srcset="">
                   </div>
-                  <img class="responsive-img pokeImage" src="images/151-mew.png">
+                  <div id="mewsOverlay">
+                  <img class="responsive-img materialboxed pokeImage" src="images/151-mew.png">
+                </div>
                 </section>
               </section>
               <!-- End of the  nameAndImageContainer -->
@@ -225,7 +301,7 @@
                   <!-- Masterballs with stats -->
                   <section class="row">
                     <section class="col s4 masterballContainer">
-                      <div class="hoverable masterballs">
+                      <div class="masterballs">
                         <img class="responsive-img" src="images/masterball_by_britishtime-d68qina (1).png" alt="" srcset="">
                         <div id="mewDefense" class="stats flow-text">
                           <!-- Defense Goes Here -->
@@ -233,7 +309,7 @@
                       </div>
                     </section>
                     <section class="col s4 masterballContainer">
-                      <div class="hoverable masterballs">
+                      <div class="masterballs">
                         <img class="responsive-img" src="images/masterball_by_britishtime-d68qina (1).png" alt="" srcset="">
                         <div id="mewAttack" class="stats flow-text">
                           <!-- Attack Goes Here -->
@@ -241,7 +317,7 @@
                       </div>
                     </section>
                     <section class="col s4 masterballContainer">
-                      <div class="hoverable masterballs">
+                      <div class="masterballs">
                         <img class="responsive-img" src="images/masterball_by_britishtime-d68qina (1).png" alt="" srcset="">
                         <div id="mewHP" class="stats flow-text">
                           <!-- HP Goes Here -->
@@ -257,7 +333,7 @@
                   <!-- Masterballs with stats -->
                   <section class="row">
                     <section class="col s4 masterballContainer">
-                      <div class="hoverable masterballs">
+                      <div class="masterballs">
                         <img class="responsive-img" src="images/masterball_by_britishtime-d68qina (1).png" alt="" srcset="">
                         <div id="mewSpDef" class="stats flow-text">
                           <!-- Special Defense Goes Here -->
@@ -265,7 +341,7 @@
                       </div>
                     </section>
                     <section class="col s4 masterballContainer">
-                      <div class="hoverable masterballs">
+                      <div class="masterballs">
                         <img class="responsive-img" src="images/masterball_by_britishtime-d68qina (1).png" alt="" srcset="">
                         <div id="mewSpAtk" class="stats flow-text">
                           <!-- Special Attack Goes Here -->
@@ -273,7 +349,7 @@
                       </div>
                     </section>
                     <section class="col s4 masterballContainer">
-                      <div class="hoverable masterballs">
+                      <div class="masterballs">
                         <img class="responsive-img" src="images/masterball_by_britishtime-d68qina (1).png" alt="" srcset="">
                         <div id="mewAbilities" class="stats flow-text">
                           <!-- Abilities Go Here -->
@@ -288,29 +364,99 @@
                 <blockquote class="flow-text rightSide">
                   <!-- Masterballs with stats -->
                   <section class="row">
-                      <section class="col s4 masterballContainer">
-                        <div class="hoverable masterballs">
-                          <img class="responsive-img" src="images/masterball_by_britishtime-d68qina (1).png" alt="" srcset="">
-                          <div id="mewSpDef" class="stats flow-text">
-                            <!-- Special Defense Goes Here -->
+                      <section class="col s4 containerForMoves mewMoves scale-transition scale-out">
+                            <ul class="collapsible">
+                                <li>
+                                    <div class="collapsible-header">
+                                        <span class="psychicName pokemonMoveName"><!--MoveName goes here--></span>
+                                        <span class="badge psychicBadge"><!--TYPE goes here--></span>
                           </div>
+                                      <div class="collapsible-body center-align">
+                                        <section class="row">
+                                          <section class="psychicAccuracy col s4">
+                                            <!--ACC goes here-->
+                                          </section>
+                                          <section class="psychicPP col s4">
+                                            <!-- PP goes here -->
+                                          </section>
+                                          <section class="psychicPower col s4">
+                                            <!-- PWR goes here -->
+                                          </section>
+                                        </section>
+                        </div>
+                                </li>
+                                <li>
+                                  <div class="collapsible-header">
+                                    <span class="hyperBeamName pokemonMoveName"><!--MoveName goes here--></span>
+                                    <span class="badge hyperBeamBadge"><!--TYPE goes here--></span>
+                                  </div>
+                                  <div class="collapsible-body center-align">
+                                    <section class="row">
+                                      <section class="hyperBeamAccuracy col s4">
+                                        <!-- ACC goes here -->
+                                      </section>
+                                      <section class="hyperBeamPP col s4">
+                                        <!-- PP goes here -->
+                                      </section>
+                                      <section class="hyperBeamPower col s4">
+                                        <!-- PWR goes here -->
+                                      </section>
+                      </section>
+                          </div>
+                                </li>
+                              </ul>
                         </div>
                       </section>
                       <section class="col s4 masterballContainer">
-                        <div class="hoverable masterballs">
+                        <div class="masterballs">
                           <img class="responsive-img" src="images/masterball_by_britishtime-d68qina (1).png" alt="" srcset="">
-                          <div id="mewSpAtk" class="stats flow-text">
-                            <!-- Special Attack Goes Here -->
+                          <div id="mewsButton" class="stats flow-text">
+                            Moves<br><button class="btn-floating btn-large pulse"><i class="material-icons">compare_arrows</i></button>
                           </div>
-                        </div>
+                          </div>
                       </section>
-                      <section class="col s4 masterballContainer">
-                        <div class="hoverable masterballs">
-                          <img class="responsive-img" src="images/masterball_by_britishtime-d68qina (1).png" alt="" srcset="">
-                          <div id="mewAbilities" class="stats flow-text">
-                            <!-- Abilities Go Here -->
-                          </div>
+                      <section class="col s4 containerForMoves mewMoves scale-transition scale-out">
+                          <div class="col s12 centerMovesBox">
+                              <ul class="collapsible">
+                                  <li>
+                                      <div class="collapsible-header">
+                                          <span class="shadowClawName pokemonMoveName"><!--MoveName goes here--></span>
+                                          <span class="badge shadowClawBadge"><!--TYPE Goes Here--></span>
                         </div>
+                                        <div class="collapsible-body center-align">
+                                          <section class="row">
+                                            <section class="shadowClawAccuracy col s4">
+                                              <!-- ACC goes here -->
+                                            </section>
+                                            <section class="shadowClawPP col s4">
+                                              <!-- PP goes here -->
+                                            </section>
+                                            <section class="shadowClawPower col s4">
+                                              <!-- PWR goes here -->
+                      </section>
+                    </section>
+                                        </div>
+                                  </li>
+                                  <li>
+                                    <div class="collapsible-header">
+                                      <span class="dragonTailName pokemonMoveName"><!--MoveName goes here--></span>
+                                      <span class="badge dragonTailBadge"><!--TYPE goes here--></span>
+                                    </div>
+                                    <div class="collapsible-body center-align">
+                                      <section class="row">
+                                        <section class="dragonTailAccuracy col s4">
+                                          <!-- ACC goes here -->
+                                        </section>
+                                        <section class="dragonTailPP col s4">
+                                          <!-- PP goes here -->
+                                        </section>
+                                        <section class="dragonTailPower col s4">
+                                          <!-- PWR goes here -->
+                                        </section>
+                                      </section>
+                                    </div>
+                                  </li>
+                                </ul>
                       </section>
                     </section>
                 </blockquote>
@@ -328,14 +474,14 @@
           <!-- Third Parallax -->
           <section class="parallax-container">
             <div class="parallax">
-              <img src="http://weni.ru/wallpapers/45e2eea510c9d7e16cd6c48594284f68/2731_6.jpg">
+              <img src="https://wallpapercave.com/wp/vrlTETF.jpg">
             </div>
           </section>
 
 
           <!-- Container Row that goes horizontally across the entire page -->
           <!-- Start of the First Row (Rayquaza's Row) -->
-          <section class="row outermostRow">
+          <section id="rayquazaOutermostRow" class="row outermostRow">
             <!-- One Column in the Container Row that goes all the way across the page (12 on the grid) It has a fixed height established in SASS -->
             <section class="col s12 outermostContainer">
               <!-- A New Container Row that is Inside the Outer Container Row that goes across the span of the page -->
@@ -350,8 +496,10 @@
                       <img class="loadingGif" src="images/masterball_by_britishtime-d68qina.gif" alt="" srcset="">
                       <img class="loadingGif" src="images/masterball_by_britishtime-d68qina.gif" alt="" srcset="">
                     </div>
-                    <img id="rayquaza" class="responsive-img pokeImage" src="images/384-rayquaza.png">
-                    <img id="megaRayquaza" class="responsive-img pokeImage hidden" src="images/384-f2-mega-rayquaza.png">
+                    <div id="rayquazasOverlay">
+                    <img id="rayquaza" class="responsive-img materialboxed pokeImage" src="images/384-rayquaza.png">
+                    <img id="megaRayquaza" class="responsive-img materialboxed pokeImage hidden" src="images/384-f2-mega-rayquaza.png">
+                    </div>
                     <section class="row">
                       <section class="col s12">
                         <ul class="tabs">
@@ -376,7 +524,7 @@
                     <!-- Masterballs with stats -->
                     <section class="row">
                       <section class="col s4 masterballContainer">
-                        <div class="hoverable masterballs">
+                        <div class="masterballs">
                           <img class="responsive-img" src="images/masterball_by_britishtime-d68qina (1).png" alt="" srcset="">
                           <div id="rayquazaHP" class="stats flow-text">
                             <!-- HP Goes Here -->
@@ -384,7 +532,7 @@
                         </div>
                       </section>
                       <section class="col s4 masterballContainer">
-                        <div class="hoverable masterballs">
+                        <div class="masterballs">
                           <img class="responsive-img" src="images/masterball_by_britishtime-d68qina (1).png" alt="" srcset="">
                           <div id="rayquazaAttack" class="stats flow-text">
                             <!-- Attack Goes Here -->
@@ -392,7 +540,7 @@
                         </div>
                       </section>
                       <section class="col s4 masterballContainer">
-                        <div class="hoverable masterballs">
+                        <div class="masterballs">
                           <img class="responsive-img" src="images/masterball_by_britishtime-d68qina (1).png" alt="" srcset="">
                           <div id="rayquazaDefense" class="stats flow-text">
                             <!-- Defense Goes Here -->
@@ -408,7 +556,7 @@
                     <!-- Masterballs with stats -->
                     <section class="row">
                       <section class="col s4 masterballContainer">
-                        <div class="hoverable masterballs">
+                        <div class="masterballs">
                           <img class="responsive-img" src="images/masterball_by_britishtime-d68qina (1).png" alt="" srcset="">
                           <div id="rayquazaAbilities" class="stats flow-text">
                             <!-- Abilities Go Here -->
@@ -416,7 +564,7 @@
                         </div>
                       </section>
                       <section class="col s4 masterballContainer">
-                        <div class="hoverable masterballs">
+                        <div class="masterballs">
                           <img class="responsive-img" src="images/masterball_by_britishtime-d68qina (1).png" alt="" srcset="">
                           <div id="rayquazaSpAtk" class="stats flow-text">
                             <!-- Special Attack Goes Here -->
@@ -424,7 +572,7 @@
                         </div>
                       </section>
                       <section class="col s4 masterballContainer">
-                        <div class="hoverable masterballs">
+                        <div class="masterballs">
                           <img class="responsive-img" src="images/masterball_by_britishtime-d68qina (1).png" alt="" srcset="">
                           <div id="rayquazaSpDef" class="stats flow-text">
                             <!-- Special Defense Goes Here -->
@@ -439,29 +587,99 @@
                   <blockquote class="flow-text leftSide">
                     <!-- Masterballs with stats -->
                     <section class="row">
-                        <section class="col s4 masterballContainer">
-                          <div class="hoverable masterballs">
-                            <img class="responsive-img" src="images/masterball_by_britishtime-d68qina (1).png" alt="" srcset="">
-                            <div id="rayquazaAbilities" class="stats flow-text">
-                              <!-- Abilities Go Here -->
+                        <section class="col s4 containerForMoves rayquazaMoves scale-transition scale-out">
+                              <ul class="collapsible">
+                                  <li>
+                                      <div class="collapsible-header">
+                                          <span class="hyperBeamName pokemonMoveName"><!--MoveName goes here--></span>
+                                          <span class="badge hyperBeamBadge"><!--TYPE goes here--></span>
                             </div>
+                                        <div class="collapsible-body center-align">
+                                          <section class="row">
+                                            <section class="hyperBeamAccuracy col s4">
+                                              <!-- ACC  goes here -->
+                                            </section>
+                                            <section class="hyperBeamPP col s4">
+                                              <!-- PP goes here -->
+                                            </section>
+                                            <section class="hyperBeamPower col s4">
+                                              <!-- PWR goes here -->
+                                            </section>
+                                          </section>
+                          </div>
+                                  </li>
+                                  <li>
+                                    <div class="collapsible-header">
+                                      <span class="dragonTailName pokemonMoveName"><!--MoveName goes here--></span>
+                                      <span class="badge dragonTailBadge"><!--TYPE goes here--></span>
+                                    </div>
+                                    <div class="collapsible-body center-align">
+                                      <section class="row">
+                                        <section class="dragonTailAccuracy col s4">
+                                          <!-- ACC goes here -->
+                        </section>
+                                        <section class="dragonTailPP col s4">
+                                          <!-- PP goes here -->
+                                        </section>
+                                        <section class="dragonTailPower col s4">
+                                          <!-- PWR goes here -->
+                                        </section>
+                                      </section>
+                                    </div>
+                                  </li>
+                                </ul>
                           </div>
                         </section>
                         <section class="col s4 masterballContainer">
-                          <div class="hoverable masterballs">
+                          <div class="masterballs">
                             <img class="responsive-img" src="images/masterball_by_britishtime-d68qina (1).png" alt="" srcset="">
-                            <div id="rayquazaSpAtk" class="stats flow-text">
-                              <!-- Special Attack Goes Here -->
+                            <div id="rayquazasButton" class="stats flow-text">
+                              Moves<br><button class="btn-floating btn-large pulse"><i class="material-icons">compare_arrows</i></button>
                             </div>
                           </div>
                         </section>
-                        <section class="col s4 masterballContainer">
-                          <div class="hoverable masterballs">
-                            <img class="responsive-img" src="images/masterball_by_britishtime-d68qina (1).png" alt="" srcset="">
-                            <div id="rayquazaSpDef" class="stats flow-text">
-                              <!-- Special Defense Goes Here -->
+                        <section class="col s4 containerForMoves rayquazaMoves scale-transition scale-out">
+                            <div class="col s12 centerMovesBox">
+                                <ul class="collapsible">
+                                    <li>
+                                        <div class="collapsible-header">
+                                            <span class="dragonClawName pokemonMoveName"><!--MoveName goes here--></span>
+                                            <span class="badge dragonClawBadge"><!--TYPE goes here--></span>
+                                          </div>
+                                          <div class="collapsible-body center-align">
+                                            <section class="row">
+                                              <section class="dragonClawAccuracy col s4">
+                                                <!-- ACC goes here -->
+                                              </section>
+                                              <section class="dragonClawPP col s4">
+                                                <!-- PP goes here -->
+                                              </section>
+                                              <section class="dragonClawPower col s4">
+                                                <!-- PWR goes here -->
+                                              </section>
+                                            </section>
+                                          </div>
+                                    </li>
+                                    <li>
+                                      <div class="collapsible-header">
+                                        <span class="dragonPulseName pokemonMoveName"><!--MoveName goes here--></span>
+                                        <span class="badge dragonPulseBadge"><!--TYPE goes here--></span>
                             </div>
+                                      <div class="collapsible-body center-align">
+                                        <section class="row">
+                                          <section class="dragonPulseAccuracy col s4">
+                                            <!-- ACC goes here -->
+                                          </section>
+                                          <section class="dragonPulsePP col s4">
+                                            <!-- PP goes here -->
+                                          </section>
+                                          <section class="dragonPulsePower col s4">
+                                            <!-- PWR goes here -->
+                                          </section>
+                                        </section>
                           </div>
+                                    </li>
+                                  </ul>
                         </section>
                       </section>
                   </blockquote>
@@ -479,232 +697,10 @@
             <!-- Fourth Parallax -->
             <section class="parallax-container">
               <div class="parallax">
-                <img src="http://weni.ru/wallpapers/45e2eea510c9d7e16cd6c48594284f68/2731_6.jpg">
+                <img src="https://wallpapercave.com/wp/vrlTETF.jpg">
               </div>
             </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <!-- Leave space after the formatting 
-Going to have to come back to last 4 section endings after reformatting
-.
-.
-.
-.
-.
-.
-.
-.
-.
-.
-.-->
-
-
-            <!-- Some Ideas I'm considering -->
-            <section id='showTesting'>
-
-              <section class="row">
-                <section class="col s12">
-                  <ul class="tabs">
-                    <li class="tab col s3">
-                      <a href="#test1">Test 1</a>
-                    </li>
-                    <li class="tab col s3">
-                      <a class="active" href="#test2">Test 2</a>
-                    </li>
-                    <li class="tab col s3">
-                      <a href="#test4">Test 4</a>
-                    </li>
-                  </ul>
-                </section>
-                <div id="test1" class="col s12">Test 1</div>
-                <div id="test2" class="col s12">Test 2</div>
-                <div id="test4" class="col s12">Test 4</div>
-              </section>
-
-              <div class="hopeThisWorks">
-                <img class="materialboxed" data-caption="A picture of a way with a group of trees in a park" src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/150.png">
-                <div class="materialboxed flow-text" width=''>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, adipisci. Animi, ipsa debitis officia iure eos sunt officiis
-                  ex sapiente veniam fugiat in consequatur libero culpa repellat dolorum nobis pariatur modi vero quibusdam!
-                  Quae laudantium qui dolores optio aut expedita?
-                </div>
-              </div>
-              <!-- <img class="materialboxed" data-caption="A picture of a way with a group of trees in a park" src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/150.png"> -->
-
-              <ul>
-                <!-- Mewtwo -->
-                <li>
-                  <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/150.png" alt="" srcset="">
-                </li>
-                <!--Mewtwo X  -->
-                <li>
-                  <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/150_f2.png" alt="" srcset="">
-                </li>
-                <!-- Mewtwo Y -->
-                <li>
-                  <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/150_f3.png" alt="" srcset="">
-                </li>
-              </ul>
-
-              <ul>
-                <!-- Mew -->
-                <li>
-                  <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/151.png" alt="" srcset="">
-                </li>
-              </ul>
-
-              <ul>
-                <!-- Rayquaza -->
-                <li>
-                  <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/384.png" alt="" srcset="">
-                </li>
-                <!-- Mega Rayquaza -->
-                <li>
-                  <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/384_f2.png" alt="" srcset="">
-                </li>
-                <!-- Pokemon Logo -->
-                <li>
-                  <img style="height:300px;width:700px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/2000px-International_Pok%C3%A9mon_logo.svg.png"
-                    alt="" srcset="">
-                </li>
-              </ul>
-
-              <ul>
-                <!-- Mew Drawing Gif -->
-                <li>
-                  <img src="https://pa1.narvii.com/5823/f7a2b499ff7f70adf97b737b0baac49bc68b0a2d_hq.gif" alt="" srcset="">
-                </li>
-                <!-- Mew reg gif -->
-                <li>
-                  <img style="width:200px; height:200px;" src="https://vignette.wikia.nocookie.net/pokemon/images/d/d2/Mew_XY.gif/revision/latest?cb=20140131072229"
-                    alt="" srcset="">
-                </li>
-                <!-- Rayquaza Gif -->
-                <li>
-                  <img src="https://thumbs.gfycat.com/AmpleMajesticAntelopegroundsquirrel-max-1mb.gif" alt="" srcset="">
-                </li>
-                <!--  Mega Rayquaza Gif -->
-                <li>
-                  <img src="https://thumbs.gfycat.com/GraciousNextAegeancat-max-1mb.gif" alt="" srcset="">
-                </li>
-                <!-- Gym Leader - (Ivan) -->
-                <li>
-                  <img src="https://orig00.deviantart.net/e94a/f/2010/338/2/5/pokemon_trainer_karrik_by_coyote12-d34892i.png" alt="" srcset="">
-                </li>
-                <li>
-
-                  <a class="btn-flat btn waves-effect waves-light">ATTACK</a>
-                  <br>
-                  <a class="btn-floating btn-large waves-effect waves-light yellow">75</a>
-
-                </li>
-              </ul>
-              <!-- test button -->
-              <span class="btn-flat green-text">ATTACK</span>
-              <br>
-              <a style="font-size:12px;" class="btn-floating btn-large waves-effect waves-light yellow black-text">Moves</a>
-              <section class="container s12">
-                <!-- trying to make a collapsible -->
-                <section class="row">
-                  <section style="display:flex; justify-content:space-between;" class="col s6">
-                    <ul class="collapsible">
-                      <li>
-                        <div class="collapsible-header">
-                          <i class="material-icons">filter_drama</i>First</div>
-                        <div class="collapsible-body">
-                          <span>Lorem ipsum dolor sit amet.</span>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="collapsible-header">
-                          <i class="material-icons">place</i>Second</div>
-                        <div class="collapsible-body">
-                          <span>Lorem ipsum dolor sit amet.</span>
-                        </div>
-                      </li>
-                    </ul>
-                    <ul class="collapsible">
-                      <li>
-                        <div class="collapsible-header">
-                          <i class="material-icons">filter_drama</i>First</div>
-                        <div class="collapsible-body">
-                          <span>Lorem ipsum dolor sit amet.</span>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="collapsible-header">
-                          <i class="material-icons">place</i>Second</div>
-                        <div class="collapsible-body">
-                          <span>Lorem ipsum dolor sit amet.</span>
-                        </div>
-                      </li>
-                    </ul>
-                  </section>
-
-                </section>
-
-
-              </section>
-
-
-
-
-              <ul class="collapsible">
-                <li>
-                  <div class="collapsible-header">
-                    <i class="material-icons">filter_drama</i>First</div>
-                  <div class="collapsible-body">
-                    <span>Lorem ipsum dolor sit amet.</span>
-                  </div>
-                </li>
-                <li>
-                  <div class="collapsible-header">
-                    <i class="material-icons">place</i>Second</div>
-                  <div class="collapsible-body">
-                    <span>Lorem ipsum dolor sit amet.</span>
-                  </div>
-                </li>
-                <li>
-                  <div class="collapsible-header">
-                    <i class="material-icons">whatshot</i>Third</div>
-                  <div class="collapsible-body">
-                    <span>Lorem ipsum dolor sit amet.</span>
-                  </div>
-                </li>
-              </ul>
-
-
-            </section>
-
-            <!-- Leave Space after testing and before JS
-  .
-  .
-  .
-  .
-  .
-  .
-  .
-  .
-  .
-  . -->
 
             <!--Load Materialize JS-->
             <script type="text/javascript" src="js/materialize.min.js"></script>

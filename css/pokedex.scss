@@ -1,87 +1,140 @@
 #showTesting{
     margin-top: 500px;
 }
+// Variables
+$primary-color: #4a148c;
+$secondary-color: #f06292;
 
+// Get my font from google font's api abns assign it to my entire site
 @import url('https://fonts.googleapis.com/css?family=Bangers|Bungee');
 
 *{
-    font-family: 'Bungee', cursive;
-
-    
+    font-family: 'Bungee', 'Bangers';   
 }
 
+//Styling for my header
 #myHeader{
     height: 150px;
-    background-color: transparent;
+    margin: 0;
+    background-color: rgb(5, 0, 10);
+    color: $primary-color;
 }
 
+//Set the height of Ivan's box really big and also position the card under his hand
 #ivanInfo{
-    height: 1100px;
-    // #ivansColumn{
-    //     height: ;
-    // }
+    margin: 0;
+    background-image: url('https://images8.alphacoders.com/438/thumb-1920-438455.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
     #trainerCard{
         height: 375px;
         z-index: 1;
         position: relative;
-        bottom: 415px;
+        bottom: 535px;
         left: 110px;
     }
 }
 
+//Styling for Ivan
 #ivansColumn{
-    height: 100%;
-    width: 100%;
+    // height: 1250px;
 }
 
 #ivansContainer{
-    height: 100%;
+    height: 1250px;
 }
 
 #ivan{
-    height: 1100px;
+    height: 100%;
 }
 
-// .loadingGif{
-//     min-height: unset;
-//     height:25px;
-//     width: 25px;
-// }
-
+//Set the height of the parallax
 .parallax-container{
     height: 700px;
 }
 
-.outermostRow{
+//Styling for the outermost row
+#mewtwoOutermostRow{
     margin: 0;
+    background-image: url('http://getwallpapers.com/wallpaper/full/4/2/9/58416.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-#mewtwoY{
+#mewOutermostRow{
+    margin: 0;
+    background-image: url('../images/glowing-mew.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#rayquazaOutermostRow{
+    margin: 0;
+    background-image: url('https://pre00.deviantart.net/75da/th/pre/f/2015/072/1/c/rayquaza_background___nebula_by_drboxhead-d8lkscp.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+// Flips these images horizontally
+#mewtwoY, #rayquaza, #megaRayquaza{
     transform: scaleX(-1);
 }
 
-#rayquaza, #megaRayquaza{
-    transform: scaleX(-1);
+// Styling to make the image of outerspace appear in the background when a pokemon img is clicked
+#materialbox-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('http://weni.ru/wallpapers/45e2eea510c9d7e16cd6c48594284f68/2731_6.jpg');
+    z-index: 1000;
+    will-change: opacity;
 }
+
+#mewsOverlay #materialbox-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('https://www.hd-wallpapersdownload.com/script/new-wallpaper/desktop-hd-images-of-saturn-the-planet-download.jpg');
+    z-index: 1000;
+    will-change: opacity;
+}
+
+#rayquazasOverlay #materialbox-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('https://wallpapercave.com/wp/vrlTETF.jpg');
+    z-index: 1000;
+    will-change: opacity;
+}
+
+.materialboxed{
+    cursor: pointer;
+    &.active{
+        cursor: pointer;
+    }
+}
+
+// Styling for the outermost container (It's a column)
 .outermostContainer{
-    // display:flex;
-    // justify-content: space-evenly;
     height: 1250px;
-    background-color: teal;
-    // .row{
-    //     height:100%;
-    // }
-    // .col{
-    //     height: 100%;
-    // }
-    // img{
-    //     height:100%;
-    //     width:100%;
-    // }
 }
+
+// Styling for large box on leftside of the screen
 .nameAndImageContainer{
     display: block;
-    // height:100%;
     max-height: fit-content;
 
     .loadingGif{
@@ -93,75 +146,177 @@
     }
 }
 
+// Style for Pokemon's name and Image
+.pokeName{
+    color: $primary-color;
+    margin: 50px 0;
+    text-transform: capitalize;
+}
+.pokeImage{
+    margin: 50px 0;
+    height: 100%;
+    width: 100%;
+}
 
-    .pokeName{
-        margin: 50px 0;
-        text-transform: capitalize;
-    }
-    .pokeImage{
-        margin: 50px 0;
-        height: 100%;
-        width: 100%;
-    }
-
-
+// Style leftside blockquotes 
 blockquote.leftSide {
     height: 32%;
     margin: 20px 0;
     padding-left: 1.5rem;
-    border-left: 5px solid green;
+    border-left: 5px solid $primary-color;
     padding-right: 1.5rem;
     border-right: 5px solid transparent;
   }
-  
+ 
+// Style rightside blockquotes 
   blockquote.rightSide {
     margin: 20px 0;
     padding-left: 1.5rem;
     border-left: 5px solid transparent;
     padding-right: 1.5rem;
-    border-right: 5px solid black;
+    border-right: 5px solid $secondary-color;
   }
 
-.besidePokemonImg{
-    height: 100%;
-}
-
+// Style for the masterballs themselves
 .masterballs{
-    // border-radius: 50%; 
     height:360px; 
-    width:360px; 
-    // background-color:green; 
+    width:360px;  
     display:flex; 
     flex-wrap: wrap;
     justify-content:center; 
     align-items: center;
 }
 
+// Spacing for the masterball container
 .masterballContainer{
     display: flex;
     justify-content: space-evenly;
 }
 
+// Style the stats inside of the masterball
 .stats{
+    font-size: 2rem;
     position: relative;
     text-align: center;
-    line-height: 30px;
-    bottom: 137px;
+    line-height: 28px;
+    bottom: 135px;
     z-index: 1;
-
+    .statValue{
+        font-size: 1.75rem;
+        color: $primary-color;
+    }
 }
 
+// Styling for the moves container
 .containerForMoves{
     height: 360px;
-    overflow: auto;  
+    overflow: auto;
 }
-  
+
+// Styling for the floating button
+.btn-floating{
+    background-color: $secondary-color;
+    &:hover{
+        background-color: $primary-color;
+    }
+    &::after{
+        background-color: $secondary-color; 
+    }
+}
+.btn:focus, .btn-large:focus, .btn-small:focus,
+.btn-floating:focus {
+  background-color: $secondary-color;
+}
+
+// To hide and reveal the pokemon
 .hidden{
     display:none;
 }
 
+// Tabs Stylng
 .tabs {
+    background-color: transparent;
     display: flex;
     justify-content: space-evenly;
+    height: 60px;
     width: 100%;
+}
+
+.tabs .tab a:hover, .tabs .tab a.active {
+    background-color: transparent;
+    color: $primary-color;
+}
+
+.tabs .tab a {
+    color: $secondary-color;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0 24px;
+    font-size: 2rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-transition: color .28s ease, background-color .28s ease;
+    transition: color .28s ease, background-color .28s ease;
+}
+
+.tabs .indicator {
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    background-color: $primary-color;
+    will-change: left, right;
+}
+
+// Styling for the collapsible containing the moves
+.collapsible{
+    font-size: 2rem;
+}
+div.collapsible-header{
+    color: $primary-color;
+    // padding: 10px;
+}
+
+.pokemonMoveRow{
+    margin: 0;
+}
+
+.pokemonMoveName{
+    // background-color: $secondary-color;
+    color: $primary-color;
+    padding: 5px;
+}
+
+span.badge{
+    // background-color: firebrick;
+    color:white;
+    // padding: 10spx;
+    // .psychicType{
+    //     background-color: #F85888;
+    // }
+    // .normalType{
+    //     background-color: #A8A878;
+    // }
+}
+
+.psychicType{
+    background-color: #F85888;
+    color:white;
+}
+
+.normalType{
+    background-color: #A8A878;
+}
+
+.ghostType{
+    background-color: #705898;
+}
+
+.dragonType{
+    background-color: #7038F8;
+}
+
+div.collapsible-body{
+    background-color: $secondary-color;
+    color: $primary-color;
 }

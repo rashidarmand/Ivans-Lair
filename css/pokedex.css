@@ -4,62 +4,119 @@
 }
 
 * {
-  font-family: 'Bungee', cursive;
+  font-family: 'Bungee', 'Bangers';
 }
 
 #myHeader {
   height: 150px;
-  background-color: transparent;
+  margin: 0;
+  background-color: #05000a;
+  color: #4a148c;
 }
 
 #ivanInfo {
-  height: 1100px;
+  margin: 0;
+  background-image: url("https://images8.alphacoders.com/438/thumb-1920-438455.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #ivanInfo #trainerCard {
   height: 375px;
   z-index: 1;
   position: relative;
-  bottom: 415px;
+  bottom: 535px;
   left: 110px;
 }
 
-#ivansColumn {
-  height: 100%;
-  width: 100%;
-}
-
 #ivansContainer {
-  height: 100%;
+  height: 1250px;
 }
 
 #ivan {
-  height: 1100px;
+  height: 100%;
 }
 
 .parallax-container {
   height: 700px;
 }
 
-.outermostRow {
+#mewtwoOutermostRow {
   margin: 0;
+  background-image: url("http://getwallpapers.com/wallpaper/full/4/2/9/58416.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-#mewtwoY {
+#mewOutermostRow {
+  margin: 0;
+  background-image: url("../images/glowing-mew.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#rayquazaOutermostRow {
+  margin: 0;
+  background-image: url("https://pre00.deviantart.net/75da/th/pre/f/2015/072/1/c/rayquaza_background___nebula_by_drboxhead-d8lkscp.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#mewtwoY, #rayquaza, #megaRayquaza {
   -webkit-transform: scaleX(-1);
   -ms-transform: scaleX(-1);
   transform: scaleX(-1);
 }
 
-#rayquaza, #megaRayquaza {
-  -webkit-transform: scaleX(-1);
-  -ms-transform: scaleX(-1);
-  transform: scaleX(-1);
+#materialbox-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("http://weni.ru/wallpapers/45e2eea510c9d7e16cd6c48594284f68/2731_6.jpg");
+  z-index: 1000;
+  will-change: opacity;
+}
+
+#mewsOverlay #materialbox-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("https://www.hd-wallpapersdownload.com/script/new-wallpaper/desktop-hd-images-of-saturn-the-planet-download.jpg");
+  z-index: 1000;
+  will-change: opacity;
+}
+
+#rayquazasOverlay #materialbox-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("https://wallpapercave.com/wp/vrlTETF.jpg");
+  z-index: 1000;
+  will-change: opacity;
+}
+
+.materialboxed {
+  cursor: pointer;
+}
+
+.materialboxed.active {
+  cursor: pointer;
 }
 
 .outermostContainer {
   height: 1250px;
-  background-color: teal;
 }
 
 .nameAndImageContainer {
@@ -78,6 +135,7 @@
 }
 
 .pokeName {
+  color: #4a148c;
   margin: 50px 0;
   text-transform: capitalize;
 }
@@ -92,7 +150,7 @@ blockquote.leftSide {
   height: 32%;
   margin: 20px 0;
   padding-left: 1.5rem;
-  border-left: 5px solid green;
+  border-left: 5px solid #4a148c;
   padding-right: 1.5rem;
   border-right: 5px solid transparent;
 }
@@ -102,11 +160,7 @@ blockquote.rightSide {
   padding-left: 1.5rem;
   border-left: 5px solid transparent;
   padding-right: 1.5rem;
-  border-right: 5px solid black;
-}
-
-.besidePokemonImg {
-  height: 100%;
+  border-right: 5px solid #f06292;
 }
 
 .masterballs {
@@ -135,11 +189,17 @@ blockquote.rightSide {
 }
 
 .stats {
+  font-size: 2rem;
   position: relative;
   text-align: center;
-  line-height: 30px;
-  bottom: 137px;
+  line-height: 28px;
+  bottom: 135px;
   z-index: 1;
+}
+
+.stats .statValue {
+  font-size: 1.75rem;
+  color: #4a148c;
 }
 
 .containerForMoves {
@@ -147,16 +207,106 @@ blockquote.rightSide {
   overflow: auto;
 }
 
+.btn-floating {
+  background-color: #f06292;
+}
+
+.btn-floating:hover {
+  background-color: #4a148c;
+}
+
+.btn-floating::after {
+  background-color: #f06292;
+}
+
+.btn:focus, .btn-large:focus, .btn-small:focus,
+.btn-floating:focus {
+  background-color: #f06292;
+}
+
 .hidden {
   display: none;
 }
 
 .tabs {
+  background-color: transparent;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: space-evenly;
   -ms-flex-pack: space-evenly;
   justify-content: space-evenly;
+  height: 60px;
   width: 100%;
+}
+
+.tabs .tab a:hover, .tabs .tab a.active {
+  background-color: transparent;
+  color: #4a148c;
+}
+
+.tabs .tab a {
+  color: #f06292;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0 24px;
+  font-size: 2rem;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-transition: color .28s ease, background-color .28s ease;
+  -o-transition: color .28s ease, background-color .28s ease;
+  transition: color .28s ease, background-color .28s ease;
+}
+
+.tabs .indicator {
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  background-color: #4a148c;
+  will-change: left, right;
+}
+
+.collapsible {
+  font-size: 2rem;
+}
+
+div.collapsible-header {
+  color: #4a148c;
+}
+
+.pokemonMoveRow {
+  margin: 0;
+}
+
+.pokemonMoveName {
+  color: #4a148c;
+  padding: 5px;
+}
+
+span.badge {
+  color: white;
+}
+
+.psychicType {
+  background-color: #F85888;
+  color: white;
+}
+
+.normalType {
+  background-color: #A8A878;
+}
+
+.ghostType {
+  background-color: #705898;
+}
+
+.dragonType {
+  background-color: #7038F8;
+}
+
+div.collapsible-body {
+  background-color: #f06292;
+  color: #4a148c;
 }
