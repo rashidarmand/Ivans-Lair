@@ -114,7 +114,7 @@ axios.get(`https://pokeapi.co/api/v2/pokemon/150`)
     let mewTwoAbilities = document.querySelector('#mewTwoAbilities')
     
 
-    mewTwoName.innerHTML = `<h1 class="mewtwo pokeName"> ${ivan.get("mewtwo")['name']}</h1>`;
+    mewTwoName.innerHTML = `<h3 class="mewtwo pokeName"> ${ivan.get("mewtwo")['name']}</h3>`;
     mewTwoHP.innerHTML = `HP<br><span class="statValue">${ivan.get("mewtwo")['hp']}</span>`;
     mewTwoAttack.innerHTML = `ATTACK<br><span class="statValue">${ivan.get("mewtwo")['attack']}</span>`;
     mewTwoDefense.innerHTML = `DEFENSE<br><span class="statValue">${ivan.get("mewtwo")['defense']}</span>`;
@@ -174,7 +174,7 @@ axios.get(`https://pokeapi.co/api/v2/pokemon/151`)
     let mewSpDef = document.querySelector('#mewSpDef')
     let mewAbilities = document.querySelector('#mewAbilities')
 
-    mewName.innerHTML = `<h1 class="pokeName"> ${ivan.get("mew")['name']}</h1>`;
+    mewName.innerHTML = `<h3 class="pokeName"> ${ivan.get("mew")['name']}</h3>`;
     mewHP.innerHTML = `HP<br><span class="statValue">${ivan.get("mew")['hp']}</span>`;
     mewAttack.innerHTML = `ATTACK<br><span class="statValue">${ivan.get("mew")['attack']}</span>`;
     mewDefense.innerHTML = `DEFENSE<br><span class="statValue">${ivan.get("mew")['defense']}</span>`;
@@ -232,7 +232,7 @@ axios.get(`https://pokeapi.co/api/v2/pokemon/384`)
     let rayquazaSpDef = document.querySelector('#rayquazaSpDef')
     let rayquazaAbilities = document.querySelector('#rayquazaAbilities')
 
-    rayquazaName.innerHTML = `<h1 class="pokeName"> ${ivan.get("rayquaza")['name']}</h1>`;
+    rayquazaName.innerHTML = `<h3 class="pokeName"> ${ivan.get("rayquaza")['name']}</h3>`;
     rayquazaHP.innerHTML = `HP<br><span class="statValue">${ivan.get("rayquaza")['hp']}</span>`;
     rayquazaAttack.innerHTML = `ATTACK<br><span class="statValue">${ivan.get("rayquaza")['attack']}</span>`;
     rayquazaDefense.innerHTML = `DEFENSE<br><span class="statValue">${ivan.get("rayquaza")['defense']}</span>`;

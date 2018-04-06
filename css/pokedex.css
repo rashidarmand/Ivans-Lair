@@ -1,14 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Bangers|Bungee");
-#showTesting {
-  margin-top: 500px;
-}
-
 * {
   font-family: 'Bungee', 'Bangers';
 }
 
 #myHeader {
-  height: 150px;
   margin: 0;
   background-color: #05000a;
   color: #4a148c;
@@ -22,15 +17,11 @@
 }
 
 #ivanInfo #trainerCard {
-  height: 375px;
+  height: 189px;
   z-index: 1;
   position: relative;
-  bottom: 535px;
+  bottom: 325px;
   left: 110px;
-}
-
-#ivansContainer {
-  height: 1250px;
 }
 
 #ivan {
@@ -38,7 +29,7 @@
 }
 
 .parallax-container {
-  height: 700px;
+  height: 550px;
 }
 
 #mewtwoOutermostRow {
@@ -116,7 +107,7 @@
 }
 
 .outermostContainer {
-  height: 1250px;
+  height: 680px;
 }
 
 .nameAndImageContainer {
@@ -130,18 +121,18 @@
   display: inline-block;
   text-align: center;
   margin: 16.5px;
-  height: 125px;
-  width: 125px;
+  height: 62.5px;
+  width: 62.5px;
 }
 
 .pokeName {
   color: #4a148c;
-  margin: 50px 0;
+  margin: 25px 0;
   text-transform: capitalize;
 }
 
 .pokeImage {
-  margin: 50px 0;
+  margin: 25px 0;
   height: 100%;
   width: 100%;
 }
@@ -164,8 +155,8 @@ blockquote.rightSide {
 }
 
 .masterballs {
-  height: 360px;
-  width: 360px;
+  height: 180px;
+  width: 180px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -189,21 +180,21 @@ blockquote.rightSide {
 }
 
 .stats {
-  font-size: 2rem;
+  font-size: 1rem;
   position: relative;
   text-align: center;
-  line-height: 28px;
-  bottom: 135px;
+  line-height: 15px;
+  bottom: 68.5px;
   z-index: 1;
 }
 
 .stats .statValue {
-  font-size: 1.75rem;
+  font-size: .8rem;
   color: #4a148c;
 }
 
 .containerForMoves {
-  height: 360px;
+  height: 200px;
   overflow: auto;
 }
 
@@ -251,7 +242,7 @@ blockquote.rightSide {
   width: 100%;
   height: 100%;
   padding: 0 24px;
-  font-size: 2rem;
+  font-size: 1rem;
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -269,7 +260,7 @@ blockquote.rightSide {
 }
 
 .collapsible {
-  font-size: 2rem;
+  font-size: .8rem;
 }
 
 div.collapsible-header {
@@ -286,7 +277,17 @@ div.collapsible-header {
 }
 
 span.badge {
+  min-width: 3rem;
+  padding: 0 6px;
+  margin-left: 14px;
+  text-align: center;
+  font-size: .55rem;
+  line-height: 22px;
+  height: 22px;
   color: white;
+  float: right;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .psychicType {
@@ -309,4 +310,5 @@ span.badge {
 div.collapsible-body {
   background-color: #f06292;
   color: #4a148c;
+  padding: 1rem;
 }
